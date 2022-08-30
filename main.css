@@ -54,6 +54,9 @@ body
 }
 .section-2 div:nth-of-type(2)
 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height:34.4px;
     background-color: #6ab3f8;
     border-radius: 0px 0px 25px 25px;
@@ -82,8 +85,14 @@ body
     padding:30px 10px;
     width:60px;
     height: 110px;
+    cursor:pointer;
     margin-bottom:1rem;
     background-color: #FFF;
     border:5px solid #144fc6;
     border-radius:0px 0px 20px 20px;
+}
+.fill
+{
+    background-color: #6ab3f8 !important;
+    color:#FFF !important;
 }
