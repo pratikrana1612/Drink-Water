@@ -21,13 +21,37 @@ const fill = (index) =>
 }
 const fillGlass = (idx) =>
 {
-    Percentage = (100/8*(idx+1));
-    height=420*Percentage/100;
-
-    glassFill.style.height = `${height}px`;
-    glassUnFill.style.height=`${420-height}px`;
-    glassFill.innerText = `${Percentage}%`;
-    // glassUnFill.innerText=`${)}`
+    if(divs[idx].classList.contains('fill'))
+    {
+        Percentage = (100/8*(idx+1));
+        height=420*Percentage/100;
+        glassFill.style.height = `${height}px`;
+        glassUnFill.style.height=`${420-height}px`;
+        glassFill.innerText = `${Percentage}%`;
+        glassUnFill.children[0].innerText=`${(2000-250*(idx+1))/1000}L`;
+    }
+    else{
+        Percentage = (100/8*(idx));
+        height=420*Percentage/100;
+        glassFill.style.height = `${height}px`;
+        glassUnFill.style.height=`${420-height}px`;
+        glassFill.innerText = `${Percentage}%`;
+        glassUnFill.children[0].innerText=`${(2000-250*(idx))/1000}L`;
+    }
+    // Percentage = (100/8*(idx+1));
+    // height=420*Percentage/100;
+    // glassFill.style.height = `${height}px`;
+    // glassUnFill.style.height=`${420-height}px`;
+    // glassFill.innerText = `${Percentage}%`;
+    // glassUnFill.children[0].innerText=`${(2000-250*(idx))/1000}L`;
+    // glassUnFill.innerText=`${(2000-250*(idx+1))/1000}`;
+    // console.log((2000-250*(idx+1))/1000);
+    if(!(divs[0].classList.contains('fill')))
+    {
+           glassFill.style.height = `0px`;
+           glassFill.innerText = ``;
+           glassUnFill.style.height=`100%`;
+    }
 }
 for(let div of divs)
 {

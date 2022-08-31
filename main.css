@@ -48,6 +48,7 @@ body
     align-items: center;
     justify-content: center;
     height:395.6px;
+    transition: 0.3s ease;
 }
 .section-2 div:nth-of-type(1) h2{
     margin:0;
@@ -57,7 +58,8 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
-    height:34.4px;
+    /* height:34.4px; */
+    height:0px;
     background-color: #6ab3f8;
     border-radius: 0px 0px 25px 25px;
     color:#144fc6;
